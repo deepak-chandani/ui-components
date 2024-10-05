@@ -1,0 +1,36 @@
+.datatable-container {
+    width: 80%;
+    margin-inline: auto;
+}
+table {
+    margin-block: .5rem;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+tr, th {
+    border-bottom: 1px solid silver;
+    text-align: left;
+    padding: 5px;
+}
+.controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    border-top: 2px solid silver;
+    padding: .5rem;
+}
+
+.pagination-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.range-input-container {
+    display: flex;
+    width: fit-content;
+    gap: .2rem;
+}
+.range-input-container input {
+    width: 50px;
+}
