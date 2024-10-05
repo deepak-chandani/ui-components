@@ -6,7 +6,7 @@
 
 ## Which components will be included:
   I have planned to include the following components (the list could grow if I find more exciting things to build):
-  - **DataTable**
+  - `DataTable` component
   - `Tabs` component
   - `Accordion` component
   - `AuthCodeInput` (OTPInput) 
