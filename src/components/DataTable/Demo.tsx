@@ -39,7 +39,8 @@ const userColumns: Columns<User> = [
 
 function DemoApp() {
   return (
-    <div>
+    <div className="demo-container">
+      <h2>DataTable demo</h2>
       <div>
         <DataTable columns={houseColumns} data={housesData} />
       </div>

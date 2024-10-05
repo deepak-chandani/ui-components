@@ -1,0 +1,33 @@
+
+.container {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 12px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.digits-wrapper {
+  display: flex;
+  gap: 8px;
+  margin-block: 8px;
+}
+
+.digit-input {
+  --size: 2rem;
+  font-size: 1.5em;
+  width: var(--size);
+  height: var(--size);
+  text-align: center;
+}
+
+.digit-input:focus{
+  outline: 2px solid #000;
+}
+
+.buttons-wrapper {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  
+}
