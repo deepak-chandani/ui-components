@@ -14,3 +14,7 @@
 
 ## Notes:
   - I have also shared my solution approach for building the component and the lessons learned while building each component.
+
+ 1. `DataTable` component:
+     - breakdown: `<HeaderRow>`, `<Row>`, `<SelectPageSize />`, `<Pagination>` smaller components 👇
+ <img src="./src/assets/DataTable_diagram.png" />
