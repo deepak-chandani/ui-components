@@ -25,7 +25,7 @@ export default function TabsDemoApp() {
   return (
     <div className="demo-container">
       <h3>Tabs component</h3>
-      <Tabs data={tabsData} />;
+      <Tabs data={tabsData} />
     </div>
   )
 }

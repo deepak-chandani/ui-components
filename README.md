@@ -18,3 +18,4 @@
  1. `DataTable` component:
      - breakdown: `<HeaderRow>`, `<Row>`, `<SelectPageSize />`, `<Pagination>` smaller components 👇
  <img src="./src/assets/DataTable_diagram.png" />
+ <video src="./src/assets/DataTable_demo.mp4" >
