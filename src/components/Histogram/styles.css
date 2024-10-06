@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+.histogram-container {
+    padding: 10px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: stretch;*/
+}
+
+.graph {
+    position: relative;
+    /*height: 100%;*/
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    margin: 30px;
+    flex: 1;
+}
+
+
+/*Bar css*/
+.bar-list {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.bar {
+    max-width: 40px;
+    border: 1px solid black;
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+    /*background-color: silver;*/
+    background-color: rgb(175, 122, 161);
+    font-weight: bold;
+    flex: 1;
+}
+
+/* Axis css*/
+.axis {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+}
+
+.axis.horizontal {
+    width: 100%;
+    bottom: -30px;
+    justify-content: space-around;
+}
+
+.axis.vertical {
+    flex-direction: column-reverse;
+    left: -30px;
+    bottom: 0;
+
+    /*justify-content: space-between;*/
+    height: 100%;
+}
+
+.axis .mark {
+    flex-basis: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.axis .mark.vertical {
+    transform: translateY(-11px);
+    align-items: baseline;
+    flex: 1;
+}
+
+.axis .mark.horizontal {
+    flex-direction: column-reverse;
+    flex: 1;
+}
+
+.button-container {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}

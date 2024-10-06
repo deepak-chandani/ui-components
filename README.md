@@ -17,7 +17,8 @@
 
  1. `DataTable` component:
      - breakdown: `<HeaderRow>`, `<Row>`, `<SelectPageSize />`, `<Pagination>` smaller components 👇
- <img src="./src/assets/DataTable_diagram.png" />
+      
+<img src="./src/assets/DataTable_exported_plus.png" />
 
 https://github.com/user-attachments/assets/7a51696e-6576-4d84-a570-926bc94c940e
 
@@ -30,9 +31,10 @@ https://github.com/user-attachments/assets/7a51696e-6576-4d84-a570-926bc94c940e
  <img src="./src/assets/Tabs_diagram_exported.png" />
 
  3. `AuthCodeInput` component breakdown:
+  <img src="./src/assets/AuthCodeInput_plus.png" />
+
     - renders six `<Digit />` components (number of digits can be controlled using `length` prop, default is 6)
     - initially focus on first `<Digit>` (`focusIndex=0`)
-    - <img src="./src/assets/AuthCodeInput_plus.png" />
     - once user enters valid value in `<Digit>`, then the focus moves to next digit
     - pressing `Backspace` key will clear the `<Digit>` value & then move to previous digit
   
