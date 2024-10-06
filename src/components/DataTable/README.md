@@ -1,4 +1,8 @@
 
+1. `DataTable` component breakdown:
+  -  `<HeaderRow>`, `<Row>`, `<SelectPageSize />`, `<Pagination>` smaller components 👇
+ <img src="../../assets/DataTable_diagram.png" />
+
 ## Learnings from this challenge
  - `sort(compareFn)` method mutates the array, if you don't want to mutate then `toSorted()` will be useful
  - in `compareFn(a,b)` you can compare string or number using `a < b ? -1 : a > b ? 1 : 0`
