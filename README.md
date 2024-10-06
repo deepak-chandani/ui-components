@@ -21,10 +21,20 @@
 
 https://github.com/user-attachments/assets/7a51696e-6576-4d84-a570-926bc94c940e
 
- 2. `Tabs` component
-    - breakdown: `<TabList>` contains multiple `<Tab>` (which can be clicked to display respective panel) 
-    - as `Tab` is interactive clickable element hence using `button` element is good for accessibility.
-    - `<TabPanel>` contains contents for a specific tab
+ 2. `Tabs` component breakdown:
+    - `<TabList>` contains multiple `<Tab>` elements (which can be clicked to display respective panel) 
+    - a Tab can be clicked to see associated `TabPanel`
+      - as `Tab` is interactive clickable element hence using `button` is good for accessibility.
+    - `<TabPanel>` contains contents for a specific tab (only the active-tab is displayed at a time)
+  
  <img src="./src/assets/Tabs_diagram_exported.png" />
+
+ 1. `AuthCodeInput` component breakdown:
+    - renders six `<Digit />` components (number of digits can be controlled using `length` prop, default is 6)
+    - initially focus on first `<Digit>` (`focusIndex=0`)
+  <img src="./src/assets/AuthCodeInput.png" />
+    - once user enters valid value in `<Digit>` then the focus moves to next digit
+    - pressing `Backspace` key will clear the `<Digit>` value & then move to previous digit
+  
  
 

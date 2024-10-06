@@ -4,6 +4,7 @@
     - `focusIndex: number`: index which defines which digit-input should be focussed
       - this `focusIndex` is moved forward when digit value is entered in current input
       - when `Backspace` key is pressed we move focus to previous input
+  <img src="../../assets/AuthCodeInput.png" />
 
 ## Events to listen
   - initially I thought listening to  `onChange` should cover all the scenarios but `onChange` doesn't fires when `Backspace`, `ArrowLeft` or `ArrowRight` keys are pressed hence we have to listen for `onKeyUp or onKeyDown` event
