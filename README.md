@@ -18,6 +18,13 @@
  1. `DataTable` component:
      - breakdown: `<HeaderRow>`, `<Row>`, `<SelectPageSize />`, `<Pagination>` smaller components 👇
  <img src="./src/assets/DataTable_diagram.png" />
- 
+
 https://github.com/user-attachments/assets/7a51696e-6576-4d84-a570-926bc94c940e
+
+ 2. `Tabs` component
+    - breakdown: `<TabList>` contains multiple `<Tab>` (which can be clicked to display respective panel) 
+    - as `Tab` is interactive clickable element hence using `button` element is good for accessibility.
+    - `<TabPanel>` contains contents for a specific tab
+ <img src="./src/assets/Tabs_diagram_exported.png" />
+ 
 

@@ -16,11 +16,12 @@
 }
 
 .content-panels {
- margin-block: 5px;
+ margin-block: 6px;
 }
 
 .tab-panel {
   /* display: none;  */
+  text-align: initial;
 }
 
 .tab-panel.active-panel {
