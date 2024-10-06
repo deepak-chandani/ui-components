@@ -4,7 +4,7 @@ import { ColumnDef, Filter } from "./types";
 type HeaderFilterInputProps<T> = {
   column: ColumnDef<T>;
   filter?: Filter;
-  onChange: (e: React.ChangeEvent<HTMLElement>) => void;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
 };
 
 export default function HeaderFilterInput<TData>({

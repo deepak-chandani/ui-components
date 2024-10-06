@@ -114,52 +114,22 @@ export default function DataTable<TData extends { id: string | number }>({
 
   const { items, totalPageCount } = paginateData(records, page, perPage);
 
-  function renderFilterInput(c: ColumnDef<TData>) {
-    const field = c.key as keyof TData;
-    const filter = filters && filters[field];
-    return (
-      <HeaderFilterInput
-        column={c}
-        filter={filter}
-        onChange={handleFilterChange}
-      />
-    );
-  }
-
   return (
     <div className="datatable-container">
       <table>
         <thead>
-          <tr>
-            {columns.map((c) => {
-              const { field, direction } = sortData;
-              const arrow =
-                c.key === field
-                  ? direction === SortDirection.ASC
-                    ? "⬆"
-                    : "⬇"
-                  : null;
-              return (
-                <th key={c.key} data-field={c.key} onClick={handleColumnClick}>
-                  {c.label} {arrow}
-                  {c.filterType ? renderFilterInput(c) : null}
-                </th>
-              );
-            })}
-          </tr>
+          <HeaderRow
+            columns={columns}
+            sortData={sortData}
+            filters={filters}
+            onColumnClick={handleColumnClick}
+            onFilterChange={handleFilterChange}
+          />
         </thead>
         <tbody>
-          {items.map((item) => {
-            return (
-              <tr key={item.id}>
-                {columns.map((col) => {
-                  const cellValue =
-                    col.renderCell?.(item) ?? item[col.key as keyof TData];
-                  return <td key={col.key}>{cellValue}</td>;
-                })}
-              </tr>
-            );
-          })}
+          {items.map((item) => (
+            <Row item={item} columns={columns} />
+          ))}
         </tbody>
       </table>
       <div className="controls">
@@ -175,6 +145,66 @@ export default function DataTable<TData extends { id: string | number }>({
   );
 }
 
+type HeaderRowProps<TData> = {
+  columns: Columns<TData>;
+  sortData: SortData<TData>;
+  onColumnClick: React.MouseEventHandler<HTMLElement>;
+  filters: Filters<TData>;
+  onFilterChange: React.ChangeEventHandler<HTMLInputElement>;
+};
 
+function HeaderRow<TData>({
+  columns,
+  sortData,
+  onColumnClick,
+  filters,
+  onFilterChange,
+}: HeaderRowProps<TData>) {
+  
+  function renderFilterInput(c: ColumnDef<TData>) {
+    if(!c.filterType) return null;
 
+    const field = c.key as keyof TData;
+    const filter = filters && filters[field];
+    return (
+      <HeaderFilterInput column={c} filter={filter} onChange={onFilterChange} />
+    );
+  }
 
+  return (
+    <tr>
+      {columns.map((c) => {
+        const { field, direction } = sortData;
+        const arrow =
+          c.key === field
+            ? direction === SortDirection.ASC
+              ? "⬆"
+              : "⬇"
+            : null;
+        return (
+          <th key={c.key} data-field={c.key} onClick={onColumnClick}>
+            {c.label} {arrow}
+            {renderFilterInput(c)}
+          </th>
+        );
+      })}
+    </tr>
+  );
+}
+
+type RowProps<TData> = {
+  item: TData & { id: string | number };
+  columns: Columns<TData>;
+};
+
+function Row<TData>({ item, columns }: RowProps<TData>) {
+  return (
+    <tr key={item.id}>
+      {columns.map((col) => {
+        const cellValue =
+          col.renderCell?.(item) ?? item[col.key as keyof TData];
+        return <td key={col.key}>{cellValue}</td>;
+      })}
+    </tr>
+  );
+}
