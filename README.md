@@ -32,7 +32,7 @@ https://github.com/user-attachments/assets/7a51696e-6576-4d84-a570-926bc94c940e
  3. `AuthCodeInput` component breakdown:
     - renders six `<Digit />` components (number of digits can be controlled using `length` prop, default is 6)
     - initially focus on first `<Digit>` (`focusIndex=0`)
-    - <img src="./src/assets/AuthCodeInput.png" />
+    - <img src="./src/assets/AuthCodeInput_plus.png" />
     - once user enters valid value in `<Digit>`, then the focus moves to next digit
     - pressing `Backspace` key will clear the `<Digit>` value & then move to previous digit
   
