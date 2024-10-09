@@ -1,6 +1,7 @@
 # UI Components project
   - I wanted to build most of the standard UI components, commonly used in web applications, such as Tabs, Accordion, ModalDialog, using React.
   - This repo is a collection of components built for practice and to expand my knowledge
+  - Demo link: <a href="https://ui-components-ts.surge.sh">UI Components</a>
   - There are lots of accessibility challenges that I stumbled upon and handled while building these components.
   - I have captured those learnings for each component & documented them inside the respective component folders.
 
@@ -11,6 +12,7 @@
   - `Accordion` component
   - `AuthCodeInput` (OTPInput) 
   - `ModalDialog`
+  - `Histogram`: to show BarChart
 
 ## Notes:
   I have also shared my solution approach for building each component and the lessons learned while building it.

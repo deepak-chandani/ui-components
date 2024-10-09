@@ -2,6 +2,7 @@ import AuthCodeInputDemo from "./components/AuthCodeInput/Demo"
 import DataTableDemo from "./components/DataTable/Demo"
 import './App.css'
 import TabsDemoApp from "./components/Tabs/TabsDemo"
+import HistogramDemo from "./components/Histogram/HistogramDemo"
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <DataTableDemo />
       <AuthCodeInputDemo />
       <TabsDemoApp />
+      <HistogramDemo />
     </div>
   )
 }
